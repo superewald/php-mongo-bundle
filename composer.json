@@ -1,12 +1,12 @@
 {
-    "name": "sokil/php-mongo-bundle",
+    "name": "superewald/php-mongo-bundle",
     "description": "MongoDb Symfony Bundle",
     "homepage": "http://phpmongokit.github.io/",
     "license": "MIT",
     "authors": [
         {
-            "name": "Sokil Dmytro",
-            "email": "dmytro.sokil@gmail.com"
+            "name": "Super Ewald",
+            "email": "m.ewald@alerno.de"
         }
     ],
     "require": {
