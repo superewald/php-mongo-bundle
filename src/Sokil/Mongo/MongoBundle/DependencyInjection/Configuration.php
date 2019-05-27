@@ -12,12 +12,21 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder('mongo');
         $rootNode = $treeBuilder->root('mongo');
 
         $rootNode
             ->children()
                 ->scalarNode('dsn')->end()
+                ->arrayNode('map')
+                    ->arrayPrototype()
+                        ->arrayPrototype()
+                            ->children()
+                                ->scalarNode('class')->end()
+                                ->scalarNode('documentClass')->end()
+                        ->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;
